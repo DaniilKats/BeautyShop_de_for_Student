@@ -15,45 +15,60 @@
             <RowDefinition Height="43*"/>
         </Grid.RowDefinitions>
         <GroupBox Header="Работа с данными:">
-            
+
         </GroupBox>
         <DataGrid
+            Name="GridServices"
             AutoGenerateColumns="False"
             IsReadOnly="True"
             Grid.Row="1">
             <DataGrid.Columns>
-                <DataGridTextColumn 
-                    Header="Поле"
+                <DataGridTemplateColumn
+                    Header="Список услуг"
                     Width="*"
-                    Binding="{Binding }"
-                    />
-                <DataGridTextColumn 
-                    Header="Поле"
-                    Width="*"
-                    Binding="{Binding }"
-                    />
-                <DataGridTextColumn 
-                    Header="Поле"
-                    Width="*"
-                    Binding="{Binding }"
-                    />
-                <DataGridTextColumn 
-                    Header="Поле"
-                    Width="*"
-                    Binding="{Binding }"
-                    />
-                <DataGridTextColumn 
-                    Header="Поле"
-                    Width="*"
-                    Binding="{Binding }"
-                    />
-                
+                    >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <StackPanel Orientation="Horizontal">
+
+                                    <Image
+                                        Width="200"
+                                        Height="200"
+                                        Source="{Binding MainImagePath}"
+                                    />
+
+                                    <StackPanel>
+                                        <TextBlock 
+                                            Style="{StaticResource HeaderStyleCard}"
+                                            Text="{Binding Title}"/>
+                                        <TextBlock>
+                                            <Run Text="{Binding Cost}" 
+                                                 Style="{StaticResource DescriptionStyleCard}"
+                                                 />
+                                            <Run Text=" рублей за " 
+                                                 Style="{StaticResource DescriptionStyleCard}"
+                                                 />
+                                            <Run Text="{Binding DurationInSeconds}"
+                                                 Style="{StaticResource DescriptionStyleCard}"
+                                                 />
+                                        </TextBlock>
+                                        <TextBlock> 
+                                            <Run Text="* скидка" />
+                                            <Run Text="{Binding Discount}" />
+                                        </TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 
         <GroupBox Header="Статистика:"
                   Grid.Row="2">
-            
+
         </GroupBox>
     </Grid>
 </Page>

@@ -38,8 +38,17 @@
     <ApplicationIcon>Resources\Element\beauty_logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -62,6 +71,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Actions\ProgrammApp\ConnectionData.cs" />
     <Compile Include="Actions\ProgrammApp\FrameActionNavigate.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -89,6 +99,57 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Client.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClientService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentByService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gender.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Manufacturer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductPhoto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductSale.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Service.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ServicePhoto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tag.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="PageMain\PageAdmin.xaml.cs">
       <DependentUpon>PageAdmin.xaml</DependentUpon>
     </Compile>
@@ -118,6 +179,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,6 +198,57 @@
   <ItemGroup>
     <Resource Include="Resources\Element\beauty_logo.ico" />
     <Resource Include="Resources\Element\beauty_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Услуги салона красоты\122454.png" />
+    <Resource Include="Услуги салона красоты\96.png" />
+    <Resource Include="Услуги салона красоты\face.png" />
+    <Resource Include="Услуги салона красоты\makeup.jpg" />
+    <Resource Include="Услуги салона красоты\man.png" />
+    <Resource Include="Услуги салона красоты\mask.jpeg" />
+    <Resource Include="Услуги салона красоты\piling.jpg" />
+    <Resource Include="Услуги салона красоты\soliarij.jpg" />
+    <Resource Include="Услуги салона красоты\брови.png" />
+    <Resource Include="Услуги салона красоты\Гречишный массаж.jpg" />
+    <Resource Include="Услуги салона красоты\Декорирование нарощенных ресниц стразами.jpg" />
+    <Resource Include="Услуги салона красоты\Демакияж.jpg" />
+    <Resource Include="Услуги салона красоты\Депиляция воском.jpg" />
+    <Resource Include="Услуги салона красоты\Европейский маникюр.jpg" />
+    <Resource Include="Услуги салона красоты\ИК-сауна.jpg" />
+    <Resource Include="Услуги салона красоты\Классический маникюр.png" />
+    <Resource Include="Услуги салона красоты\Комбинированный маникюр.jpg" />
+    <Resource Include="Услуги салона красоты\Контурная пластика.jpg" />
+    <Resource Include="Услуги салона красоты\массаж.jpg" />
+    <Resource Include="Услуги салона красоты\Мезотерапия.jpg" />
+    <Resource Include="Услуги салона красоты\Моделирование ресниц.jpg" />
+    <Resource Include="Услуги салона красоты\ногти.png" />
+    <Resource Include="Услуги салона красоты\Окрашивание бровей.jpg" />
+    <Resource Include="Услуги салона красоты\Парафинотерапия.jpg" />
+    <Resource Include="Услуги салона красоты\Покрытие ногтей гель-лаком.jpg" />
+    <Resource Include="Услуги салона красоты\Полировка ногтей.jpg" />
+    <Resource Include="Услуги салона красоты\Прессотерапия.jpg" />
+    <Resource Include="Услуги салона красоты\Прокол ушей пистолетом.png" />
+    <Resource Include="Услуги салона красоты\Ресницы.png" />
+    <Resource Include="Услуги салона красоты\Снятие ресниц.jpg" />
+    <Resource Include="Услуги салона красоты\Стоун-терапия.jpg" />
+    <Resource Include="Услуги салона красоты\стрижка.png" />
+    <Resource Include="Услуги салона красоты\Укрепление ногтей гелем.jpg" />
+    <Resource Include="Услуги салона красоты\Шугаринг.jpg" />
+    <Resource Include="Услуги салона красоты\Экспресс SPA.png" />
+    <Resource Include="Услуги салона красоты\Экспресс-педикюр.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

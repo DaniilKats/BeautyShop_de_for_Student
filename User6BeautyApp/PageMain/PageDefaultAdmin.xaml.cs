@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using User6BeautyApp.Actions.ProgrammApp;
 
 namespace User6BeautyApp.PageMain
 {
@@ -23,6 +24,18 @@ namespace User6BeautyApp.PageMain
         public PageDefaultAdmin()
         {
             InitializeComponent();
+
+            GridServices.ItemsSource = ConnectionData.ConnectPoint.Service.ToList();
+        }
+
+        private void BtnEditService_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnDeleteService_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

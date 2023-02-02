@@ -26,6 +26,7 @@ namespace User6BeautyApp
         {
             InitializeComponent();
 
+
             FrameActionNavigate.frameNavigate = FrmMain;
             FrmMain.Navigate(new PageSighIn());
         }

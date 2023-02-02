@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:User6BeautyApp"
         mc:Ignorable="d"
         Title="Приложение салона красоты" 
-        ResizeMode="NoResize"
         Height="450" Width="800"
         Background="#e1e4ff">
     <Grid>

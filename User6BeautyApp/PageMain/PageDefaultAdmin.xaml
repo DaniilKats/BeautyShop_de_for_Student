@@ -18,46 +18,65 @@
 
         </GroupBox>
         <DataGrid
+            Name="GridServices"
             AutoGenerateColumns="False"
             IsReadOnly="True"
             Grid.Row="1">
             <DataGrid.Columns>
-                <DataGridTextColumn 
-                    Header="Поле"
+                <DataGridTemplateColumn
+                    Header="Список услуг"
                     Width="*"
-                    Binding="{Binding }"
-                    />
-                <DataGridTextColumn 
-                    Header="Поле"
-                    Width="*"
-                    Binding="{Binding }"
-                    />
-                <DataGridTextColumn 
-                    Header="Поле"
-                    Width="*"
-                    Binding="{Binding }"
-                    />
-                <DataGridTextColumn 
-                    Header="Поле"
-                    Width="*"
-                    Binding="{Binding }"
-                    />
-                <DataGridTextColumn 
-                    Header="Поле"
-                    Width="*"
-                    Binding="{Binding }"
-                    />
-                <DataGridTemplateColumn>
+                    >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <Button Content="Удалить"/>
-                                <Button Content="Отредактировать"/>
-                            </StackPanel>
+                            <Grid>
+                                <StackPanel Orientation="Horizontal">
+
+                                    <Image
+                                        Width="200"
+                                        Height="200"
+                                        Source="{Binding MainImagePath}"
+                                    />
+
+                                    <StackPanel>
+                                        <TextBlock 
+                                            Style="{StaticResource HeaderStyleCard}"
+                                            Text="{Binding Title}"/>
+                                        <TextBlock>
+                                            <Run Text="{Binding Cost}" 
+                                                 Style="{StaticResource DescriptionStyleCard}"
+                                                 />
+                                            <Run Text=" рублей за " 
+                                                 Style="{StaticResource DescriptionStyleCard}"
+                                                 />
+                                            <Run Text="{Binding DurationInSeconds}"
+                                                 Style="{StaticResource DescriptionStyleCard}"
+                                                 />
+                                        </TextBlock>
+                                        <TextBlock> 
+                                            <Run Text="* скидка" />
+                                            <Run Text="{Binding Discount}" />
+                                        </TextBlock>
+
+                                        <StackPanel Orientation="Horizontal">
+
+                                            <Button 
+                                            Name="BtnEditService"
+                                            Click="BtnEditService_Click"
+                                            Content="редактировать"
+                                            />
+                                            <Button 
+                                            Name="BtnDeleteService"
+                                            Click="BtnDeleteService_Click"
+                                            Content="удалить"
+                                            />
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-
             </DataGrid.Columns>
         </DataGrid>
 

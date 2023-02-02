@@ -44,12 +44,22 @@
             <Setter Property="Background" Value="#ff4a6d" />
             <Setter Property="Foreground" Value="#fff" />
         </Style>
-        
+
         <Style TargetType="Button" x:Key="BtnDefault">
             <Setter Property="Background" Value="#e1e4ff" />
             <Setter Property="Width" Value="80"/>
             <Setter Property="Height" Value="25"/>
             <Setter Property="Margin" Value="2.5"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="HeaderStyleCard">
+            <Setter Property="Margin" Value="2.5"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="16pt" />
+        </Style>
+
+        <Style TargetType="Run" x:Key="DescriptionStyleCard">
+            <Setter Property="FontSize" Value="14pt" />
         </Style>
         
     </Application.Resources>

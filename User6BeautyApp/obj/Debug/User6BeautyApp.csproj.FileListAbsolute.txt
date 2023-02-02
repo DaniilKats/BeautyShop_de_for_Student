@@ -23,3 +23,10 @@ C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\obj\Deb
 C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\obj\Debug\PageMain\PageDefaultAdmin.g.cs
 C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\obj\Debug\PageMain\PageDefault.baml
 C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\obj\Debug\PageMain\PageDefaultAdmin.baml
+C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\bin\Debug\EntityFramework.dll
+C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\bin\Debug\EntityFramework.xml
+C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\obj\Debug\User6BeautyApp_Content.g.cs
+C:\Users\Медиацентр\source\repos\User6BeautyApp\User6BeautyApp\obj\Debug\User6BeautyApp.csproj.CopyComplete
